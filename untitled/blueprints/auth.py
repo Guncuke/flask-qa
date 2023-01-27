@@ -67,7 +67,6 @@ def get_email_captcha():
         email_captcha = EmailCaptchaModel(email=email, captcha=captcha)
         db.session.add(email_captcha)
     db.session.commit()
-    return jsonify({'code': 200, 'message': '', 'data': None})
 
 
 @bp.route('/logout')
